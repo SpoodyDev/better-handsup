@@ -17,5 +17,9 @@ Citizen.CreateThread(function()
                 ClearPedTasks(PlayerPedId())
             end
         end
+        if handsup then
+            DisablePlayerFiring(GetPlayerPed(-1),true) -- Disable firing
+            DisableControlAction(0, 45, true) -- Disable reloading
+       end
     end
 end)
